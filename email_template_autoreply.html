@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>문의 접수 확인</title>
+</head>
+<body style="margin:0;padding:0;background:#edf2ee;font-family:Arial,'Noto Sans KR',sans-serif;color:#102320;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#edf2ee;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background:#ffffff;border:1px solid #d9e2dc;border-radius:20px;overflow:hidden;">
+          <tr>
+            <td style="padding:30px 28px;background:#0f5148;color:#ffffff;">
+              <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:#c7e36a;">THANK YOU</p>
+              <h1 style="margin:0;font-size:24px;line-height:1.35;">문의가 정상적으로 접수되었습니다</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px;">
+              <p style="margin:0 0 16px;font-size:16px;line-height:1.75;"><strong>{{from_name}}</strong>님, 안녕하세요.</p>
+              <p style="margin:0 0 20px;font-size:15px;line-height:1.8;color:#50625c;">_R-Y_L5finICI3dwp에 문의해 주셔서 감사합니다. 보내주신 내용을 확인한 뒤 입력하신 이메일로 답변드리겠습니다.</p>
+              <div style="margin:0 0 22px;padding:18px;border-radius:12px;background:#f7f9f6;border:1px solid #d9e2dc;">
+                <p style="margin:0 0 7px;font-size:13px;font-weight:700;color:#28766a;">접수 내용</p>
+                <p style="margin:0 0 6px;font-size:14px;line-height:1.7;"><strong>문의 유형:</strong> {{inquiry_type}}</p>
+                <p style="margin:0 0 6px;font-size:14px;line-height:1.7;"><strong>접수 시각:</strong> {{submitted_at}}</p>
+                <p style="margin:0;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:break-word;">{{message}}</p>
+              </div>
+              <div style="margin:0 0 22px;padding:18px;border-left:4px solid #c7e36a;background:#f7f9f6;">
+                <p style="margin:0 0 6px;font-size:14px;font-weight:700;">공무원 및 교육기관 AI 활용 전문 강사</p>
+                <p style="margin:0;font-size:13px;line-height:1.7;color:#64746f;">생성형 AI 업무혁신과 진로·취업교육을 참여형 실습 중심으로 설계합니다.</p>
+              </div>
+              <a href="https://my-site.vercel.app/" style="display:inline-block;padding:13px 20px;border-radius:999px;background:#0f5148;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">홈페이지 다시 보기</a>
+              <p style="margin:24px 0 0;padding-top:18px;border-top:1px solid #d9e2dc;font-size:11px;line-height:1.6;color:#7b8984;">개인정보 동의: {{privacy_agreed}} · 동의 시각: {{agreed_at}}<br>문의 페이지: {{page_url}}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

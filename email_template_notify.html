@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>교육 문의 접수 알림</title>
+</head>
+<body style="margin:0;padding:0;background:#edf2ee;font-family:Arial,'Noto Sans KR',sans-serif;color:#102320;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#edf2ee;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background:#ffffff;border:1px solid #d9e2dc;border-radius:20px;overflow:hidden;">
+          <tr>
+            <td style="padding:30px 28px;background:#0f5148;color:#ffffff;">
+              <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:#c7e36a;">NEW INQUIRY</p>
+              <h1 style="margin:0;font-size:24px;line-height:1.35;">새 교육 문의가 접수되었습니다</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px;">
+              <p style="margin:0 0 18px;font-size:15px;line-height:1.7;color:#50625c;">문의자 정보와 요청 내용을 확인한 뒤 회신해 주세요.</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-top:1px solid #d9e2dc;">
+                <tr><th align="left" style="width:112px;padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">이름</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{from_name}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">이메일</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{from_email}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">연락처</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{phone}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">소속</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{company}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">문의 유형</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{inquiry_type}}</td></tr>
+              </table>
+              <div style="margin:22px 0;padding:18px;border-radius:12px;background:#f7f9f6;border:1px solid #d9e2dc;">
+                <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#28766a;">문의 내용</p>
+                <p style="margin:0;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:break-word;">{{message}}</p>
+              </div>
+              <p style="margin:0 0 7px;font-size:12px;line-height:1.6;color:#64746f;">접수 시각: {{submitted_at}}</p>
+              <p style="margin:0 0 7px;font-size:12px;line-height:1.6;color:#64746f;">유입 페이지: {{page_url}}</p>
+              <p style="margin:0 0 22px;font-size:12px;line-height:1.6;color:#64746f;">개인정보 동의: {{privacy_agreed}} · 동의 시각: {{agreed_at}}</p>
+              <a href="mailto:{{from_email}}" style="display:inline-block;padding:13px 20px;border-radius:999px;background:#0f5148;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">문의자에게 회신하기</a>
+              <p style="margin:24px 0 0;padding-top:18px;border-top:1px solid #d9e2dc;font-size:11px;line-height:1.6;color:#7b8984;">수신 주소: {{to_email}} · 회신 주소: {{reply_to}}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

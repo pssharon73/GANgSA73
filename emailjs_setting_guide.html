@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmailJS 문의 메일 설정 가이드</title>
+  <style>
+    :root{--ink:#102320;--deep:#071916;--brand:#0f5148;--brand2:#28766a;--accent:#c7e36a;--canvas:#f4f7f4;--paper:#fff;--line:#d9e2dc;--muted:#64746f;--danger:#a43a34}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--canvas);font-family:Arial,"Noto Sans KR",sans-serif;line-height:1.7}a{color:var(--brand);font-weight:700}.wrap{width:min(1040px,calc(100% - 32px));margin:0 auto}.hero{padding:64px 0 52px;color:#fff;background:linear-gradient(130deg,var(--deep),var(--brand))}.hero small{color:var(--accent);font-weight:800;letter-spacing:.13em}.hero h1{margin:10px 0 12px;font-size:clamp(2rem,6vw,3.7rem);line-height:1.15}.hero p{max-width:720px;margin:0;color:#ccdad5}.config,.step,.final{margin:28px 0;padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:0 12px 35px rgba(7,25,22,.06)}h2{margin:0 0 18px;font-size:1.45rem}h3{margin:0 0 10px;font-size:1.08rem}.config-grid{display:grid;gap:9px}.copy-row{display:grid;grid-template-columns:190px minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#f9fbf9}.copy-row span{font-size:.83rem;font-weight:700;color:var(--muted)}code,.codebox{font-family:Consolas,"Courier New",monospace}.copy-row code{overflow-wrap:anywhere;font-size:.9rem}.copy-btn{min-height:38px;padding:0 14px;border:0;border-radius:9px;color:#fff;background:var(--brand);font-weight:800;cursor:pointer}.copy-btn:hover{background:var(--deep)}.step-number{display:inline-block;margin-bottom:9px;color:var(--brand2);font-size:.78rem;font-weight:900;letter-spacing:.12em}.instruction-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.instruction{padding:17px;border-radius:14px;background:#f7f9f6;border:1px solid var(--line)}.instruction h3{font-size:.91rem;color:var(--brand)}.instruction p,.instruction ol{margin:0;font-size:.9rem}.instruction ol{padding-left:20px}.paste-list{display:grid;gap:8px}.paste-list .copy-row{grid-template-columns:120px minmax(0,1fr) auto;padding:8px 10px}.notice{margin-top:14px;padding:13px 15px;border-left:4px solid var(--accent);background:#f7f9f6;font-size:.87rem}.warning{border-left-color:#e59b4b;color:#6c3f11}.template-box{margin-top:16px}.template-box summary{cursor:pointer;font-weight:800}.template-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0 8px}.template-toolbar span{font-size:.82rem;color:var(--muted)}pre{max-height:560px;margin:0;overflow:auto;padding:18px;border-radius:14px;color:#e8f2ee;background:#0a211d;font-size:12px;line-height:1.55;white-space:pre;tab-size:2}.variables{width:100%;border-collapse:collapse;font-size:.86rem}.variables th,.variables td{padding:10px;border:1px solid var(--line);text-align:left;vertical-align:top}.variables th{background:#edf2ee}.checklist{display:grid;gap:9px}.checklist label{display:flex;align-items:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:11px;background:#f9fbf9}.checklist input{width:19px;height:19px;margin-top:3px;accent-color:var(--brand)}footer{padding:28px 0 48px;color:var(--muted);font-size:.82rem}@media(max-width:720px){.hero{padding:44px 0 38px}.config,.step,.final{padding:20px}.copy-row,.paste-list .copy-row{grid-template-columns:1fr auto}.copy-row span{grid-column:1/-1}.instruction-grid{grid-template-columns:1fr}.variables{font-size:.78rem}.variables th,.variables td{padding:8px 6px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <small>EMAILJS SETUP GUIDE</small>
+      <h1>문의 메일 연결 가이드</h1>
+      <p>이 문서 한 개만 보면서 EmailJS 알림 메일, 문의자 자동회신, Gmail→네이버 전달과 문의 분류까지 순서대로 설정할 수 있습니다.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="config">
+      <h2>먼저 확인할 설정값</h2>
+      <div class="config-grid">
+        <div class="copy-row"><span>Public Key</span><code id="public-key">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="public-key">복사</button></div>
+        <div class="copy-row"><span>Service ID</span><code id="service-id">pssharon@hanmail.net</code><button class="copy-btn" data-copy="service-id">복사</button></div>
+        <div class="copy-row"><span>접수 알림 Template ID</span><code id="notify-id">template_vq1uvna</code><button class="copy-btn" data-copy="notify-id">복사</button></div>
+        <div class="copy-row"><span>자동회신 Template ID</span><code id="reply-id">template_3j7ogku</code><button class="copy-btn" data-copy="reply-id">복사</button></div>
+        <div class="copy-row"><span>문의 수신 Gmail</span><code id="gmail-address">myname@gmail.com</code><button class="copy-btn" data-copy="gmail-address">복사</button></div>
+        <div class="copy-row"><span>전달 받을 네이버 메일</span><code id="naver-address">myname@naver.com</code><button class="copy-btn" data-copy="naver-address">복사</button></div>
+      </div>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 1</span>
+      <h2>계정·Gmail 서비스 연결</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>EmailJS 대시보드 로그인</li><li><b>Email Services</b> → <b>Add New Service</b></li><li><b>Gmail</b> 선택 → <b>Connect Account</b></li><li><b>Account</b> → <b>General</b>에서 Public Key 확인</li></ol></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>Service ID</span><code id="s1-service">pssharon@hanmail.net</code><button class="copy-btn" data-copy="s1-service">복사</button></div><div class="copy-row"><span>Public Key</span><code id="s1-key">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s1-key">복사</button></div></div></div>
+      </div>
+      <p class="notice warning">Service ID는 EmailJS의 Email Services 화면에 표시된 값과 정확히 같아야 합니다. 입력한 값과 화면의 ID가 다르면 홈페이지 코드의 Service ID도 실제 값으로 맞춰야 합니다.</p>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 2</span>
+      <h2>접수 알림 템플릿 만들기</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li><b>Email Templates</b> → <b>Create New Template</b></li><li><b>Settings</b>에서 수신·발신 항목 입력</li><li>Content 편집기 우측 상단 <b>코드 보기(&lt; &gt;)</b> 선택</li><li>아래 알림용 HTML 전문 붙여넣기 후 저장</li></ol></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s2-to">myname@gmail.com</code><button class="copy-btn" data-copy="s2-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s2-from">{{from_name}}</code><button class="copy-btn" data-copy="s2-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s2-reply">{{from_email}}</code><button class="copy-btn" data-copy="s2-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s2-subject">[문의] {{inquiry_type}} - {{from_name}}</code><button class="copy-btn" data-copy="s2-subject">복사</button></div><div class="copy-row"><span>Bcc(대안)</span><code id="s2-bcc">myname@naver.com</code><button class="copy-btn" data-copy="s2-bcc">복사</button></div></div></div>
+      </div>
+      <p class="notice">사용 변수: from_name, from_email, phone, company, inquiry_type, message, to_email, reply_to, submitted_at, page_url, privacy_agreed, agreed_at</p>
+      <details class="template-box" open>
+        <summary>email_template_notify.html 전문</summary>
+        <div class="template-toolbar"><span>코드 보기 모드에 그대로 붙여넣으세요.</span><button class="copy-btn" data-copy-template="notify">복사</button></div>
+        <pre><code id="notify-code"></code></pre>
+      </details>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 3</span>
+      <h2>문의자 자동회신 템플릿 만들기</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li><b>Email Templates</b> → <b>Create New Template</b></li><li><b>Settings</b>에서 자동회신 항목 입력</li><li>Content 편집기 우측 상단 <b>코드 보기(&lt; &gt;)</b> 선택</li><li>아래 자동회신용 HTML 전문 붙여넣기 후 저장</li></ol></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s3-to">{{from_email}}</code><button class="copy-btn" data-copy="s3-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s3-from">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s3-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s3-reply">myname@gmail.com</code><button class="copy-btn" data-copy="s3-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s3-subject">문의 주셔서 감사합니다 - _R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s3-subject">복사</button></div></div></div>
+      </div>
+      <details class="template-box" open>
+        <summary>email_template_autoreply.html 전문</summary>
+        <div class="template-toolbar"><span>코드 보기 모드에 그대로 붙여넣으세요.</span><button class="copy-btn" data-copy-template="autoreply">복사</button></div>
+        <pre><code id="autoreply-code"></code></pre>
+      </details>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 4</span>
+      <h2>Gmail에서 네이버 메일로 자동 전달</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>Gmail <b>설정</b> → <b>모든 설정 보기</b></li><li><b>전달 및 POP/IMAP</b> → <b>전달 주소 추가</b></li><li>네이버 메일에서 확인 메일 인증</li><li>Gmail 검색창 우측 옵션 → 조건 입력 → <b>필터 만들기</b></li><li><b>다음 주소로 전달</b> 선택</li></ol></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>전달 주소</span><code id="s4-forward">myname@naver.com</code><button class="copy-btn" data-copy="s4-forward">복사</button></div><div class="copy-row"><span>필터 제목</span><code id="s4-filter">[문의]</code><button class="copy-btn" data-copy="s4-filter">복사</button></div></div></div>
+      </div>
+      <p class="notice warning">EmailJS가 내 Gmail로 보내는 메일은 자기발신 메일로 처리되어 전달 필터가 적용되지 않을 수 있습니다. 이 경우 STEP 2의 접수 알림 템플릿 Settings에서 Bcc에 myname@naver.com을 넣으세요.</p>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 5</span>
+      <h2>Gmail에서 문의 내역 자동 분류</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>Gmail 검색창 우측 <b>검색 옵션 표시</b></li><li>제목에 <b>[문의]</b> 입력</li><li><b>필터 만들기</b> → <b>라벨 적용</b></li><li>필요하면 <b>받은편지함 건너뛰기(보관)</b> 선택</li></ol></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>제목 조건</span><code id="s5-subject">[문의]</code><button class="copy-btn" data-copy="s5-subject">복사</button></div><div class="copy-row"><span>라벨 예시</span><code id="s5-label">홈페이지/교육문의</code><button class="copy-btn" data-copy="s5-label">복사</button></div></div></div>
+      </div>
+    </section>
+
+    <section class="step">
+      <span class="step-number">STEP 6</span>
+      <h2>실제 문의 전송으로 동작 테스트</h2>
+      <div class="instruction-grid">
+        <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>홈페이지 문의 폼에서 필수값과 개인정보 동의 입력</li><li><b>맞춤 교육 문의 보내기</b> 선택</li><li>브라우저의 성공 안내 확인</li><li>Gmail, 문의자 메일, 네이버 메일, Gmail 라벨 순서로 확인</li></ol></div>
+        <div class="instruction"><h3>확인할 결과</h3><ol><li>Gmail에 접수 알림 도착</li><li>문의자 이메일에 자동회신 도착</li><li>네이버 메일로 전달 또는 Bcc 수신</li><li>Gmail 문의 라벨 자동 적용</li></ol></div>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2>변수 대조표</h2>
+      <table class="variables">
+        <thead><tr><th>변수명</th><th>설명</th><th>예시</th></tr></thead>
+        <tbody>
+          <tr><td>from_name</td><td>문의자 이름</td><td>홍길동</td></tr><tr><td>from_email</td><td>문의자 이메일</td><td>hong@example.com</td></tr><tr><td>phone</td><td>문의자 연락처</td><td>010-1234-5678</td></tr><tr><td>company</td><td>소속 기관·학교</td><td>OO 공공기관</td></tr><tr><td>inquiry_type</td><td>문의 유형</td><td>공공기관 AI 교육</td></tr><tr><td>message</td><td>문의 내용</td><td>교육 일정과 견적을 문의합니다.</td></tr><tr><td>to_email</td><td>접수 알림 수신 주소</td><td>myname@gmail.com</td></tr><tr><td>reply_to</td><td>문의자 회신 주소</td><td>hong@example.com</td></tr><tr><td>submitted_at</td><td>문의 접수 시각</td><td>2026-09-09 14:30</td></tr><tr><td>page_url</td><td>문의 유입 페이지</td><td>https://my-site.vercel.app/#contact</td></tr><tr><td>privacy_agreed</td><td>개인정보 동의 여부</td><td>동의</td></tr><tr><td>agreed_at</td><td>개인정보 동의 시각</td><td>2026-09-09 14:29</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="final">
+      <h2>최종 체크리스트</h2>
+      <div class="checklist"><label><input type="checkbox">Gmail 서비스가 연결되고 Service ID가 확인되었다.</label><label><input type="checkbox">접수 알림 템플릿의 Settings와 HTML을 저장했다.</label><label><input type="checkbox">문의자 자동회신 템플릿의 Settings와 HTML을 저장했다.</label><label><input type="checkbox">Gmail→네이버 전달 또는 Bcc 수신을 설정했다.</label><label><input type="checkbox">Gmail 문의 분류 라벨과 필터를 만들었다.</label><label><input type="checkbox">실제 전송 후 알림·자동회신·전달·라벨 네 가지를 확인했다.</label></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">EmailJS 문의 폼 설정 가이드 · 설정값은 EmailJS 대시보드에 표시된 실제 값과 최종 대조하세요.</div></footer>
+  <script>
+    const notifyTemplate = `<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>교육 문의 접수 알림</title>
+</head>
+<body style="margin:0;padding:0;background:#edf2ee;font-family:Arial,'Noto Sans KR',sans-serif;color:#102320;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#edf2ee;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background:#ffffff;border:1px solid #d9e2dc;border-radius:20px;overflow:hidden;">
+          <tr>
+            <td style="padding:30px 28px;background:#0f5148;color:#ffffff;">
+              <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:#c7e36a;">NEW INQUIRY</p>
+              <h1 style="margin:0;font-size:24px;line-height:1.35;">새 교육 문의가 접수되었습니다</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px;">
+              <p style="margin:0 0 18px;font-size:15px;line-height:1.7;color:#50625c;">문의자 정보와 요청 내용을 확인한 뒤 회신해 주세요.</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;border-top:1px solid #d9e2dc;">
+                <tr><th align="left" style="width:112px;padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">이름</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{from_name}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">이메일</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{from_email}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">연락처</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{phone}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">소속</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{company}}</td></tr>
+                <tr><th align="left" style="padding:12px 10px;border-bottom:1px solid #d9e2dc;background:#f7f9f6;font-size:13px;color:#50625c;">문의 유형</th><td style="padding:12px 10px;border-bottom:1px solid #d9e2dc;font-size:14px;word-break:break-word;">{{inquiry_type}}</td></tr>
+              </table>
+              <div style="margin:22px 0;padding:18px;border-radius:12px;background:#f7f9f6;border:1px solid #d9e2dc;">
+                <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#28766a;">문의 내용</p>
+                <p style="margin:0;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:break-word;">{{message}}</p>
+              </div>
+              <p style="margin:0 0 7px;font-size:12px;line-height:1.6;color:#64746f;">접수 시각: {{submitted_at}}</p>
+              <p style="margin:0 0 7px;font-size:12px;line-height:1.6;color:#64746f;">유입 페이지: {{page_url}}</p>
+              <p style="margin:0 0 22px;font-size:12px;line-height:1.6;color:#64746f;">개인정보 동의: {{privacy_agreed}} · 동의 시각: {{agreed_at}}</p>
+              <a href="mailto:{{from_email}}" style="display:inline-block;padding:13px 20px;border-radius:999px;background:#0f5148;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">문의자에게 회신하기</a>
+              <p style="margin:24px 0 0;padding-top:18px;border-top:1px solid #d9e2dc;font-size:11px;line-height:1.6;color:#7b8984;">수신 주소: {{to_email}} · 회신 주소: {{reply_to}}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+
+    const autoreplyTemplate = `<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>문의 접수 확인</title>
+</head>
+<body style="margin:0;padding:0;background:#edf2ee;font-family:Arial,'Noto Sans KR',sans-serif;color:#102320;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;background:#edf2ee;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:640px;background:#ffffff;border:1px solid #d9e2dc;border-radius:20px;overflow:hidden;">
+          <tr>
+            <td style="padding:30px 28px;background:#0f5148;color:#ffffff;">
+              <p style="margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:1.5px;color:#c7e36a;">THANK YOU</p>
+              <h1 style="margin:0;font-size:24px;line-height:1.35;">문의가 정상적으로 접수되었습니다</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:28px;">
+              <p style="margin:0 0 16px;font-size:16px;line-height:1.75;"><strong>{{from_name}}</strong>님, 안녕하세요.</p>
+              <p style="margin:0 0 20px;font-size:15px;line-height:1.8;color:#50625c;">_R-Y_L5finICI3dwp에 문의해 주셔서 감사합니다. 보내주신 내용을 확인한 뒤 입력하신 이메일로 답변드리겠습니다.</p>
+              <div style="margin:0 0 22px;padding:18px;border-radius:12px;background:#f7f9f6;border:1px solid #d9e2dc;">
+                <p style="margin:0 0 7px;font-size:13px;font-weight:700;color:#28766a;">접수 내용</p>
+                <p style="margin:0 0 6px;font-size:14px;line-height:1.7;"><strong>문의 유형:</strong> {{inquiry_type}}</p>
+                <p style="margin:0 0 6px;font-size:14px;line-height:1.7;"><strong>접수 시각:</strong> {{submitted_at}}</p>
+                <p style="margin:0;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:break-word;">{{message}}</p>
+              </div>
+              <div style="margin:0 0 22px;padding:18px;border-left:4px solid #c7e36a;background:#f7f9f6;">
+                <p style="margin:0 0 6px;font-size:14px;font-weight:700;">공무원 및 교육기관 AI 활용 전문 강사</p>
+                <p style="margin:0;font-size:13px;line-height:1.7;color:#64746f;">생성형 AI 업무혁신과 진로·취업교육을 참여형 실습 중심으로 설계합니다.</p>
+              </div>
+              <a href="https://my-site.vercel.app/" style="display:inline-block;padding:13px 20px;border-radius:999px;background:#0f5148;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;">홈페이지 다시 보기</a>
+              <p style="margin:24px 0 0;padding-top:18px;border-top:1px solid #d9e2dc;font-size:11px;line-height:1.6;color:#7b8984;">개인정보 동의: {{privacy_agreed}} · 동의 시각: {{agreed_at}}<br>문의 페이지: {{page_url}}</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+
+    document.getElementById('notify-code').textContent = notifyTemplate;
+    document.getElementById('autoreply-code').textContent = autoreplyTemplate;
+
+    function fallbackCopy(text) {
+      const area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.appendChild(area);
+      area.select();
+      const copied = document.execCommand('copy');
+      area.remove();
+      return copied;
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+      return fallbackCopy(text);
+    }
+
+    document.querySelectorAll('.copy-btn').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const targetId = button.dataset.copy;
+        const templateName = button.dataset.copyTemplate;
+        const text = templateName === 'notify' ? notifyTemplate : templateName === 'autoreply' ? autoreplyTemplate : document.getElementById(targetId).textContent;
+        const original = button.textContent;
+        try {
+          const copied = await copyText(text);
+          button.textContent = copied ? '복사됨!' : '선택 후 복사';
+        } catch (error) {
+          button.textContent = '선택 후 복사';
+        }
+        setTimeout(() => { button.textContent = original; }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>

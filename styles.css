@@ -973,3 +973,73 @@ footer { display: flex; justify-content: space-between; padding: 28px max(24px, 
 @media (prefers-reduced-motion: reduce) {
   .hero-sound-toggle.is-playing .sound-bars i { animation: none; }
 }
+/* 한국AI콘텐츠연구소 공통 헤더·푸터 */
+.lab-brand {
+  gap: 10px;
+  padding: 6px 9px;
+  border-radius: 14px;
+  transition: background .2s ease;
+}
+.lab-brand:hover { background: var(--mist); }
+.lab-brand img,
+.footer-lab-brand img { width: auto; height: 24px; flex: 0 0 auto; }
+.lab-brand-copy,
+.footer-lab-brand > span { display: grid; gap: 0; white-space: nowrap; line-height: 1.18; }
+.lab-brand-copy strong,
+.footer-lab-brand strong { font-size: .84rem; }
+.lab-brand-copy small,
+.footer-lab-brand small { margin-top: 3px; color: var(--muted); font-size: .55rem; font-weight: 700; letter-spacing: .09em; }
+
+.site-footer { align-items: center; }
+.footer-lab { display: grid; gap: 7px; }
+.footer-lab-brand { display: flex; align-items: center; width: max-content; gap: 10px; padding: 6px 8px; margin-left: -8px; border-radius: 10px; color: #d5e4de; transition: background .2s ease; }
+.footer-lab-brand:hover { background: rgba(255,255,255,.07); }
+.footer-lab-brand small { color: #778680; }
+
+/* EmailJS 문의 폼 */
+.contact-form input,
+.contact-form textarea,
+.contact-form select { font: inherit; }
+.contact-form select {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 42px 14px 15px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  outline: none;
+}
+.contact-form select:focus { border-color: var(--brand-2); box-shadow: 0 0 0 4px rgba(40,118,106,.1); }
+.privacy-block { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #f7f9f6; }
+.privacy-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.contact-form .privacy-consent { display: flex; grid-template-columns: none; align-items: center; gap: 10px; cursor: pointer; }
+.privacy-consent input { flex: 0 0 auto; width: 19px; height: 19px; padding: 0; accent-color: var(--brand); }
+.privacy-consent span { font-size: .82rem; }
+.privacy-toggle { flex: 0 0 auto; min-height: 38px; padding: 0 11px; color: var(--brand); border: 1px solid var(--line-strong); border-radius: 9px; background: var(--white); font-size: .75rem; font-weight: 800; cursor: pointer; }
+.privacy-details { margin-top: 14px; }
+.privacy-details table { width: 100%; border-collapse: collapse; font-size: .76rem; }
+.privacy-details th,
+.privacy-details td { padding: 9px 10px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.privacy-details th { width: 34%; color: #465852; background: var(--mist); }
+.privacy-message { min-height: 1.3em; margin: 8px 0 0; color: #a43a34; font-size: .75rem; font-weight: 700; }
+.submit-control { border-radius: 999px; cursor: not-allowed; }
+.submit-control.is-ready { cursor: default; }
+.submit-control:not(.is-ready) .button { pointer-events: none; }
+.contact-form .button:disabled { opacity: .46; box-shadow: none; cursor: not-allowed; transform: none; }
+.form-note[data-state="sending"] { color: var(--brand-2); }
+.form-note[data-state="success"] { color: #19703f; font-weight: 700; }
+.form-note[data-state="error"] { color: #a43a34; font-weight: 700; }
+
+@media (max-width: 600px) {
+  .site-header .brand .lab-brand-copy { display: grid; }
+  .lab-brand { gap: 8px; padding: 5px 6px; }
+  .lab-brand-copy strong { font-size: .78rem; }
+  .lab-brand-copy small { font-size: .5rem; letter-spacing: .06em; }
+  .privacy-head { align-items: flex-start; }
+  .privacy-consent span { font-size: .78rem; line-height: 1.55; }
+  .privacy-details table { font-size: .72rem; }
+  .privacy-details th,
+  .privacy-details td { padding: 8px 7px; }
+  .site-footer { gap: 18px; }
+}

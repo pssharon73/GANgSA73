@@ -3,8 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="공공기관 생성형 AI 업무혁신과 직업계고 진로·취업캠프를 설계하는 박정숙 강사 브랜딩 페이지">
-  <title>박정숙 | AI 업무혁신·진로취업 교육</title>
+  <meta name="description" content="공무원 및 교육기관 AI 활용 전문 강사">
+  <title>_R-Y_L5finICI3dwp | 공무원 및 교육기관 AI 활용 전문 강사</title>
+  <link rel="canonical" href="https://my-site.vercel.app/">
+  <meta property="og:title" content="_R-Y_L5finICI3dwp | 공무원 및 교육기관 AI 활용 전문 강사">
+  <meta property="og:description" content="공무원 및 교육기관 AI 활용 전문 강사">
+  <meta property="og:url" content="https://my-site.vercel.app/">
+  <meta property="og:image" content="https://my-site.vercel.app/assets/yeosu-career-camp-main.webp">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "박정숙",
+    "jobTitle": "공무원 및 교육기관 AI 활용 전문 강사",
+    "knowsAbout": ["AI 강의"],
+    "url": "https://my-site.vercel.app/",
+    "image": "https://my-site.vercel.app/프로파일.png",
+    "sameAs": ["https://hanconyeon.com/"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,9 +30,9 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="홈으로">
-      <span class="brand-mark">AI</span>
-      <span>AI 융합 교육 연구소</span>
+    <a class="brand lab-brand" href="https://hanconyeon.com/" target="_blank" rel="noopener" aria-label="한국AI콘텐츠연구소 홈페이지 새 탭으로 열기">
+      <img src="https://ai-homepage-prompt.vercel.app/logo.png" alt="한국AI콘텐츠연구소" onerror="this.hidden=true">
+      <span class="lab-brand-copy"><strong>한국AI콘텐츠연구소</strong><small>KOREA AI CONTENTS LAB</small></span>
     </a>
     <nav id="site-navigation" aria-label="주요 메뉴">
       <a href="#value">교육 가치</a>
@@ -313,20 +331,65 @@
         <a class="profile-download secondary-download" href="[공무원용]생성형 AI 업무혁신_강의계획안.docx" download>공무원용 강의계획안 받기 <span>↓</span></a>
       </div>
       <form class="contact-form reveal" id="inquiry-form">
-        <label>기관·학교명<input name="organization" required placeholder="예: OO 공공기관, OO 고등학교"></label>
         <div class="form-row">
-          <label>담당자<input name="name" required placeholder="성함 / 직급"></label>
-          <label>이메일<input type="email" name="email" required placeholder="name@agency.go.kr"></label>
+          <label>이름<input name="from_name" autocomplete="name" required placeholder="성함 / 직급"></label>
+          <label>이메일<input type="email" name="from_email" autocomplete="email" required placeholder="name@agency.go.kr"></label>
         </div>
-        <label>희망 일정 및 교육 인원<input name="schedule" placeholder="예: 10월 중 / 30명"></label>
-        <label>문의 내용<textarea name="message" rows="4" placeholder="실습 환경과 필요한 교육 내용을 적어주세요."></textarea></label>
-        <button class="button button-light" type="submit">맞춤 교육 문의 보내기</button>
-        <p class="form-note" id="form-note">입력한 내용으로 이메일 앱이 열립니다.</p>
+        <div class="form-row">
+          <label>연락처<input type="tel" name="phone" autocomplete="tel" placeholder="010-0000-0000"></label>
+          <label>소속<input name="company" autocomplete="organization" placeholder="예: OO 공공기관, OO 고등학교"></label>
+        </div>
+        <label>문의 유형
+          <select name="inquiry_type">
+            <option value="">문의 유형을 선택해 주세요</option>
+            <option value="공공기관 AI 업무혁신">공공기관 AI 업무혁신</option>
+            <option value="AI 콘텐츠 제작">AI 콘텐츠 제작</option>
+            <option value="진로·취업교육">진로·취업교육</option>
+            <option value="기타 문의">기타 문의</option>
+          </select>
+        </label>
+        <label>문의 내용<textarea name="message" rows="5" required placeholder="실습 환경과 필요한 교육 내용을 적어주세요."></textarea></label>
+        <input type="hidden" name="to_email" value="myname@gmail.com">
+        <input type="hidden" name="reply_to">
+        <input type="hidden" name="submitted_at">
+        <input type="hidden" name="page_url">
+        <input type="hidden" name="agreed_at">
+        <div class="privacy-block">
+          <div class="privacy-head">
+            <label class="privacy-consent"><input type="checkbox" name="privacy_agreed" value="동의" required><span>[필수] 개인정보 수집 · 이용에 동의합니다</span></label>
+            <button class="privacy-toggle" type="button" aria-expanded="false" aria-controls="privacy-details">전문 보기</button>
+          </div>
+          <div class="privacy-details" id="privacy-details" hidden>
+            <table>
+              <tbody>
+                <tr><th>수집 항목</th><td>이름, 이메일, 연락처, 소속</td></tr>
+                <tr><th>수집 · 이용 목적</th><td>문의 접수 및 답변 회신</td></tr>
+                <tr><th>보유 · 이용 기간</th><td>문의 처리 완료 후 1년 뒤 파기</td></tr>
+                <tr><th>동의 거부 권리</th><td>거부할 수 있으나 거부 시 문의 접수가 불가합니다</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="privacy-message" id="privacy-message" aria-live="polite"></p>
+        </div>
+        <div class="submit-control" id="submit-control">
+          <button class="button button-light" id="inquiry-submit" type="submit" disabled>맞춤 교육 문의 보내기</button>
+        </div>
+        <p class="form-note" id="form-note" role="status" aria-live="polite">필수 항목과 개인정보 동의를 확인해 주세요.</p>
       </form>
     </section>
   </main>
 
-  <footer><span>© 2026 AI 융합 교육 연구소</span><a href="#top">맨 위로 ↑</a></footer>
+  <footer class="site-footer">
+    <div class="footer-lab">
+      <a class="footer-lab-brand" href="https://hanconyeon.com/" target="_blank" rel="noopener" aria-label="한국AI콘텐츠연구소 홈페이지 새 탭으로 열기">
+        <img src="https://ai-homepage-prompt.vercel.app/logo.png" alt="한국AI콘텐츠연구소" onerror="this.hidden=true">
+        <span><strong>한국AI콘텐츠연구소</strong><small>KOREA AI CONTENTS LAB</small></span>
+      </a>
+      <span>© 2026 한국AI콘텐츠연구소</span>
+    </div>
+    <a href="#top">맨 위로 ↑</a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
