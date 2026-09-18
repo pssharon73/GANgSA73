@@ -1,5 +1,5 @@
 /* EmailJS 및 사이트 설정 — 이 블록에서만 관리합니다. */
-const SITE_URL = "https://my-site.vercel.app";
+const SITE_URL = "https://gangsa73.vercel.app";
 const EMAILJS_PUBLIC_KEY = "_R-Y_L5finICI3dwp";
 const EMAILJS_SERVICE_ID = "pssharon@hanmail.net";
 const EMAILJS_TEMPLATE_ID = "template_vq1uvna"; // 접수 알림

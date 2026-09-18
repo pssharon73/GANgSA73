@@ -37,4 +37,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://my-site.vercel.app/sitemap.xml
+Sitemap: https://gangsa73.vercel.app/sitemap.xml

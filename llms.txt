@@ -2,8 +2,8 @@
 > 공무원 및 교육기관 AI 활용 전문 강사
 
 ## 핵심 페이지
-- [메인](https://my-site.vercel.app/): 공공기관 AI 업무혁신과 교육기관 진로·취업 프로그램, 강사 프로필과 실제 교육 사례를 소개합니다.
+- [메인](https://gangsa73.vercel.app/): 공공기관 AI 업무혁신과 교육기관 진로·취업 프로그램, 강사 프로필과 실제 교육 사례를 소개합니다.
 
 ## 문의
-- 교육 문의: [홈페이지 문의 폼](https://my-site.vercel.app/#contact)
+- 교육 문의: [홈페이지 문의 폼](https://gangsa73.vercel.app/#contact)
 - 이메일: pssharon@hanmail.net
