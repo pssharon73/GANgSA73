@@ -1,10 +1,10 @@
 /* EmailJS 및 사이트 설정 — 이 블록에서만 관리합니다. */
 const SITE_URL = "https://gangsa73.vercel.app";
-const EMAILJS_PUBLIC_KEY = "_R-Y_L5finICI3dwp";
-const EMAILJS_SERVICE_ID = "pssharon@hanmail.net";
+const EMAILJS_PUBLIC_KEY = "Lebdq6Hu0Ac0XOJ6I";
+const EMAILJS_SERVICE_ID = "service_igeigtl";
 const EMAILJS_TEMPLATE_ID = "template_vq1uvna"; // 접수 알림
 const EMAILJS_AUTOREPLY_ID = "template_3j7ogku"; // 자동회신
-const EMAILJS_TO_EMAIL = "myname@gmail.com";
+const EMAILJS_TO_EMAIL = "pssharon73@gmail.com";
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

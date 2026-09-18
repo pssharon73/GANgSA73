@@ -21,12 +21,12 @@
     <section class="config">
       <h2>먼저 확인할 설정값</h2>
       <div class="config-grid">
-        <div class="copy-row"><span>Public Key</span><code id="public-key">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="public-key">복사</button></div>
-        <div class="copy-row"><span>Service ID</span><code id="service-id">pssharon@hanmail.net</code><button class="copy-btn" data-copy="service-id">복사</button></div>
+        <div class="copy-row"><span>Public Key</span><code id="public-key">Lebdq6Hu0Ac0XOJ6I</code><button class="copy-btn" data-copy="public-key">복사</button></div>
+        <div class="copy-row"><span>Service ID</span><code id="service-id">service_igeigtl</code><button class="copy-btn" data-copy="service-id">복사</button></div>
         <div class="copy-row"><span>접수 알림 Template ID</span><code id="notify-id">template_vq1uvna</code><button class="copy-btn" data-copy="notify-id">복사</button></div>
         <div class="copy-row"><span>자동회신 Template ID</span><code id="reply-id">template_3j7ogku</code><button class="copy-btn" data-copy="reply-id">복사</button></div>
-        <div class="copy-row"><span>문의 수신 Gmail</span><code id="gmail-address">myname@gmail.com</code><button class="copy-btn" data-copy="gmail-address">복사</button></div>
-        <div class="copy-row"><span>전달 받을 네이버 메일</span><code id="naver-address">myname@naver.com</code><button class="copy-btn" data-copy="naver-address">복사</button></div>
+        <div class="copy-row"><span>문의 수신 Gmail</span><code id="gmail-address">pssharon73@gmail.com</code><button class="copy-btn" data-copy="gmail-address">복사</button></div>
+        <div class="copy-row"><span>전달 받을 네이버 메일</span><code id="naver-address">pssharon@naver.com</code><button class="copy-btn" data-copy="naver-address">복사</button></div>
       </div>
     </section>
 
@@ -35,7 +35,7 @@
       <h2>계정·Gmail 서비스 연결</h2>
       <div class="instruction-grid">
         <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>EmailJS 대시보드 로그인</li><li><b>Email Services</b> → <b>Add New Service</b></li><li><b>Gmail</b> 선택 → <b>Connect Account</b></li><li><b>Account</b> → <b>General</b>에서 Public Key 확인</li></ol></div>
-        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>Service ID</span><code id="s1-service">pssharon@hanmail.net</code><button class="copy-btn" data-copy="s1-service">복사</button></div><div class="copy-row"><span>Public Key</span><code id="s1-key">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s1-key">복사</button></div></div></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>Service ID</span><code id="s1-service">service_igeigtl</code><button class="copy-btn" data-copy="s1-service">복사</button></div><div class="copy-row"><span>Public Key</span><code id="s1-key">Lebdq6Hu0Ac0XOJ6I</code><button class="copy-btn" data-copy="s1-key">복사</button></div></div></div>
       </div>
       <p class="notice warning">Service ID는 EmailJS의 Email Services 화면에 표시된 값과 정확히 같아야 합니다. 입력한 값과 화면의 ID가 다르면 홈페이지 코드의 Service ID도 실제 값으로 맞춰야 합니다.</p>
     </section>
@@ -45,7 +45,7 @@
       <h2>접수 알림 템플릿 만들기</h2>
       <div class="instruction-grid">
         <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li><b>Email Templates</b> → <b>Create New Template</b></li><li><b>Settings</b>에서 수신·발신 항목 입력</li><li>Content 편집기 우측 상단 <b>코드 보기(&lt; &gt;)</b> 선택</li><li>아래 알림용 HTML 전문 붙여넣기 후 저장</li></ol></div>
-        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s2-to">myname@gmail.com</code><button class="copy-btn" data-copy="s2-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s2-from">{{from_name}}</code><button class="copy-btn" data-copy="s2-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s2-reply">{{from_email}}</code><button class="copy-btn" data-copy="s2-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s2-subject">[문의] {{inquiry_type}} - {{from_name}}</code><button class="copy-btn" data-copy="s2-subject">복사</button></div><div class="copy-row"><span>Bcc(대안)</span><code id="s2-bcc">myname@naver.com</code><button class="copy-btn" data-copy="s2-bcc">복사</button></div></div></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s2-to">pssharon73@gmail.com</code><button class="copy-btn" data-copy="s2-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s2-from">{{from_name}}</code><button class="copy-btn" data-copy="s2-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s2-reply">{{from_email}}</code><button class="copy-btn" data-copy="s2-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s2-subject">[문의] {{inquiry_type}} - {{from_name}}</code><button class="copy-btn" data-copy="s2-subject">복사</button></div><div class="copy-row"><span>Bcc(대안)</span><code id="s2-bcc">pssharon@naver.com</code><button class="copy-btn" data-copy="s2-bcc">복사</button></div></div></div>
       </div>
       <p class="notice">사용 변수: from_name, from_email, phone, company, inquiry_type, message, to_email, reply_to, submitted_at, page_url, privacy_agreed, agreed_at</p>
       <details class="template-box" open>
@@ -60,7 +60,7 @@
       <h2>문의자 자동회신 템플릿 만들기</h2>
       <div class="instruction-grid">
         <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li><b>Email Templates</b> → <b>Create New Template</b></li><li><b>Settings</b>에서 자동회신 항목 입력</li><li>Content 편집기 우측 상단 <b>코드 보기(&lt; &gt;)</b> 선택</li><li>아래 자동회신용 HTML 전문 붙여넣기 후 저장</li></ol></div>
-        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s3-to">{{from_email}}</code><button class="copy-btn" data-copy="s3-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s3-from">_R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s3-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s3-reply">myname@gmail.com</code><button class="copy-btn" data-copy="s3-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s3-subject">문의 주셔서 감사합니다 - _R-Y_L5finICI3dwp</code><button class="copy-btn" data-copy="s3-subject">복사</button></div></div></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>To</span><code id="s3-to">{{from_email}}</code><button class="copy-btn" data-copy="s3-to">복사</button></div><div class="copy-row"><span>From Name</span><code id="s3-from">AI 강사 박정숙</code><button class="copy-btn" data-copy="s3-from">복사</button></div><div class="copy-row"><span>Reply To</span><code id="s3-reply">pssharon73@gmail.com</code><button class="copy-btn" data-copy="s3-reply">복사</button></div><div class="copy-row"><span>Subject</span><code id="s3-subject">문의 주셔서 감사합니다 - AI 강사 박정숙</code><button class="copy-btn" data-copy="s3-subject">복사</button></div></div></div>
       </div>
       <details class="template-box" open>
         <summary>email_template_autoreply.html 전문</summary>
@@ -74,9 +74,9 @@
       <h2>Gmail에서 네이버 메일로 자동 전달</h2>
       <div class="instruction-grid">
         <div class="instruction"><h3>화면에서 누를 위치</h3><ol><li>Gmail <b>설정</b> → <b>모든 설정 보기</b></li><li><b>전달 및 POP/IMAP</b> → <b>전달 주소 추가</b></li><li>네이버 메일에서 확인 메일 인증</li><li>Gmail 검색창 우측 옵션 → 조건 입력 → <b>필터 만들기</b></li><li><b>다음 주소로 전달</b> 선택</li></ol></div>
-        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>전달 주소</span><code id="s4-forward">myname@naver.com</code><button class="copy-btn" data-copy="s4-forward">복사</button></div><div class="copy-row"><span>필터 제목</span><code id="s4-filter">[문의]</code><button class="copy-btn" data-copy="s4-filter">복사</button></div></div></div>
+        <div class="instruction"><h3>붙여넣을 값</h3><div class="paste-list"><div class="copy-row"><span>전달 주소</span><code id="s4-forward">pssharon@naver.com</code><button class="copy-btn" data-copy="s4-forward">복사</button></div><div class="copy-row"><span>필터 제목</span><code id="s4-filter">[문의]</code><button class="copy-btn" data-copy="s4-filter">복사</button></div></div></div>
       </div>
-      <p class="notice warning">EmailJS가 내 Gmail로 보내는 메일은 자기발신 메일로 처리되어 전달 필터가 적용되지 않을 수 있습니다. 이 경우 STEP 2의 접수 알림 템플릿 Settings에서 Bcc에 myname@naver.com을 넣으세요.</p>
+      <p class="notice warning">EmailJS가 내 Gmail로 보내는 메일은 자기발신 메일로 처리되어 전달 필터가 적용되지 않을 수 있습니다. 이 경우 STEP 2의 접수 알림 템플릿 Settings에서 Bcc에 pssharon@naver.com을 넣으세요.</p>
     </section>
 
     <section class="step">
@@ -102,7 +102,7 @@
       <table class="variables">
         <thead><tr><th>변수명</th><th>설명</th><th>예시</th></tr></thead>
         <tbody>
-          <tr><td>from_name</td><td>문의자 이름</td><td>홍길동</td></tr><tr><td>from_email</td><td>문의자 이메일</td><td>hong@example.com</td></tr><tr><td>phone</td><td>문의자 연락처</td><td>010-1234-5678</td></tr><tr><td>company</td><td>소속 기관·학교</td><td>OO 공공기관</td></tr><tr><td>inquiry_type</td><td>문의 유형</td><td>공공기관 AI 교육</td></tr><tr><td>message</td><td>문의 내용</td><td>교육 일정과 견적을 문의합니다.</td></tr><tr><td>to_email</td><td>접수 알림 수신 주소</td><td>myname@gmail.com</td></tr><tr><td>reply_to</td><td>문의자 회신 주소</td><td>hong@example.com</td></tr><tr><td>submitted_at</td><td>문의 접수 시각</td><td>2026-09-09 14:30</td></tr><tr><td>page_url</td><td>문의 유입 페이지</td><td>https://gangsa73.vercel.app/#contact</td></tr><tr><td>privacy_agreed</td><td>개인정보 동의 여부</td><td>동의</td></tr><tr><td>agreed_at</td><td>개인정보 동의 시각</td><td>2026-09-09 14:29</td></tr>
+          <tr><td>from_name</td><td>문의자 이름</td><td>홍길동</td></tr><tr><td>from_email</td><td>문의자 이메일</td><td>hong@example.com</td></tr><tr><td>phone</td><td>문의자 연락처</td><td>010-1234-5678</td></tr><tr><td>company</td><td>소속 기관·학교</td><td>OO 공공기관</td></tr><tr><td>inquiry_type</td><td>문의 유형</td><td>공공기관 AI 교육</td></tr><tr><td>message</td><td>문의 내용</td><td>교육 일정과 견적을 문의합니다.</td></tr><tr><td>to_email</td><td>접수 알림 수신 주소</td><td>pssharon73@gmail.com</td></tr><tr><td>reply_to</td><td>문의자 회신 주소</td><td>hong@example.com</td></tr><tr><td>submitted_at</td><td>문의 접수 시각</td><td>2026-09-09 14:30</td></tr><tr><td>page_url</td><td>문의 유입 페이지</td><td>https://gangsa73.vercel.app/#contact</td></tr><tr><td>privacy_agreed</td><td>개인정보 동의 여부</td><td>동의</td></tr><tr><td>agreed_at</td><td>개인정보 동의 시각</td><td>2026-09-09 14:29</td></tr>
         </tbody>
       </table>
     </section>
@@ -182,7 +182,7 @@
           <tr>
             <td style="padding:28px;">
               <p style="margin:0 0 16px;font-size:16px;line-height:1.75;"><strong>{{from_name}}</strong>님, 안녕하세요.</p>
-              <p style="margin:0 0 20px;font-size:15px;line-height:1.8;color:#50625c;">_R-Y_L5finICI3dwp에 문의해 주셔서 감사합니다. 보내주신 내용을 확인한 뒤 입력하신 이메일로 답변드리겠습니다.</p>
+              <p style="margin:0 0 20px;font-size:15px;line-height:1.8;color:#50625c;">AI 강사 박정숙에게 문의해 주셔서 감사합니다. 보내주신 내용을 확인한 뒤 입력하신 이메일로 답변드리겠습니다.</p>
               <div style="margin:0 0 22px;padding:18px;border-radius:12px;background:#f7f9f6;border:1px solid #d9e2dc;">
                 <p style="margin:0 0 7px;font-size:13px;font-weight:700;color:#28766a;">접수 내용</p>
                 <p style="margin:0 0 6px;font-size:14px;line-height:1.7;"><strong>문의 유형:</strong> {{inquiry_type}}</p>
