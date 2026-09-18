@@ -178,6 +178,9 @@ section[id] { scroll-margin-top: 110px; }
 }
 .hero-copy { max-width: 720px; }
 .hero .eyebrow { color: var(--accent); }
+.hero-author { display: inline-flex; align-items: center; gap: 11px; margin: -6px 0 24px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; background: rgba(255,255,255,.07); backdrop-filter: blur(6px); }
+.hero-author strong { color: var(--white); font-size: .91rem; letter-spacing: -.02em; }
+.hero-author time { padding-left: 11px; color: #bdcec8; border-left: 1px solid rgba(255,255,255,.2); font-size: .72rem; font-weight: 600; }
 .hero h1 { margin: 0; font-size: clamp(3.4rem, 6vw, 6.35rem); line-height: 1.03; letter-spacing: -.072em; text-wrap: balance; }
 .hero h1 em { color: var(--accent); font-style: normal; }
 .hero-description { max-width: 680px; margin: 30px 0 28px; color: #cfddd8; font-size: 1.08rem; line-height: 1.8; }
@@ -673,6 +676,7 @@ footer { display: flex; justify-content: space-between; padding: 28px max(24px, 
   .section-heading > p:last-child { margin-top: 17px; font-size: .94rem; line-height: 1.75; }
 
   .hero.section { padding: 106px 16px 72px; gap: 42px; }
+  .hero-author { max-width: 100%; margin-bottom: 20px; }
   .hero h1 { font-size: clamp(2.5rem, 11.3vw, 3.05rem); line-height: 1.08; letter-spacing: -.065em; }
   .hero-description { margin-top: 23px; font-size: .96rem; line-height: 1.78; }
   .badges { flex-wrap: nowrap; gap: 7px; margin-top: 24px; padding-bottom: 5px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; }
